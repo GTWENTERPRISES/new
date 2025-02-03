@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Building2, ShoppingBag, Star } from 'lucide-react';
+import { ShoppingBag, Star } from 'lucide-react';
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,7 +36,7 @@ const Products = () => {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-  const [selectedCompany, setSelectedCompany] = useState<string>("all");
+  const [selectedCompany] = useState<string>("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   useEffect(() => {
@@ -75,10 +75,7 @@ const Products = () => {
     filterProducts(value, selectedCompany, selectedCategory);
   };
 
-  const handleCompanyChange = (value: string) => {
-    setSelectedCompany(value);
-    filterProducts(searchTerm, value, selectedCategory);
-  };
+
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value);
@@ -172,7 +169,7 @@ const Products = () => {
                </Badge>
              </div>
              <div className="text-gray-400 mb-2">
-               <span>{companies.find(company => company.id === product.empresa)?.nombre || 'Desconocida'}</span>
+             <span>{companies.find(company => company.id === Number(product.empresa))?.nombre || 'Desconocida'}</span>
              </div>
              <CardDescription className="text-gray-400 mb-4">{product.descripcion}</CardDescription>
              <div className="flex items-center gap-2 text-gray-300 mb-2">

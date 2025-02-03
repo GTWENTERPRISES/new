@@ -1,7 +1,7 @@
 "use client"
 
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react"
-import Link from "next/link"
+import {  Mail, MapPin, Phone} from "lucide-react"
+import { Facebook, Twitter, Instagram } from "lucide-react"
 
 const Footer = () => {
   return (

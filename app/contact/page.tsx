@@ -36,7 +36,7 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
 
   const validateForm = () => {
-    let tempErrors = {
+    const tempErrors = {
       nombre: "",
       email: "",
       asunto: "",
@@ -74,61 +74,35 @@ const Contact = () => {
     return isValid;
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [id]: value
+      [id]: value,
     }));
-
-    // Limpiar errores mientras se escribe
-    if (errors[id]) {
-      setErrors(prev => ({
-        ...prev,
-        [id]: ""
-      }));
-    }
   };
 
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+  
     if (!validateForm()) {
       return;
     }
-
+  
     setIsSubmitting(true);
     setSubmitStatus({ type: "", message: "" });
-
+  
     try {
-      const response = await fetch('http://localhost:8000/api/mensajes-contacto/', {
+      await fetch('http://localhost:8000/api/mensajes-contacto/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData)
       });
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "¡Mensaje enviado con éxito!"
-        });
-        // Resetear formulario
-        setFormData({
-          nombre: "",
-          email: "",
-          asunto: "",
-          mensaje: ""
-        });
-      } else {
-        throw new Error('Error al enviar el mensaje');
-      }
-    } catch (error) {
-      setSubmitStatus({
-        type: "error",
-        message: "Error al enviar el mensaje. Por favor, intente nuevamente."
-      });
+    } catch (err) {
+      console.error(err);
     } finally {
       setIsSubmitting(false);
     }

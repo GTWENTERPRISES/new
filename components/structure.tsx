@@ -12,12 +12,11 @@ import {
   Target,
   CheckCircle2,
   Link2,
-  ChevronRight,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent} from "@/components/ui/tabs"
 import {
   Dialog,
   DialogContent,
@@ -47,7 +46,7 @@ interface Servicio {
 const EstructuraOrganizacional: React.FC = () => {
   const [selectedMiembro, setSelectedMiembro] = useState<MiembroDirectorio | null>(null)
   const [selectedServicio, setSelectedServicio] = useState<Servicio | null>(null)
-  const [activeTab, setActiveTab] = useState("directorio")
+
 
   const directorio: MiembroDirectorio[] = [
     {

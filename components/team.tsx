@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Linkedin, Mail, Phone, Users, Award } from "lucide-react"
+import { motion} from "framer-motion"
+import { Mail, Phone, Award, Linkedin } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -94,14 +94,14 @@ const TeamMembers = () => {
             Todos
           </Button>
           {departamentos.map((depto) => (
-            <Button
-              key={depto}
-              onClick={() => setFilter(depto)}
-              variant={filter === depto ? "default" : "outline"}
-              className="m-2"
-            >
-              {depto}
-            </Button>
+          <Button
+          key={depto}
+          onClick={() => setFilter(depto ?? null)}
+          variant={filter === depto ? "default" : "outline"}
+          className="m-2"
+        >
+          {depto}
+        </Button>
           ))}
         </div>
 

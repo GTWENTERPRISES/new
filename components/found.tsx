@@ -3,11 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LucideIcon,
-  BookOpen, 
-  Gavel, 
-  Building, 
-  FileText, 
-  ArrowRight, 
+
   Check, 
   X
 } from 'lucide-react';
@@ -26,93 +22,7 @@ interface LegalDetails {
 const LegalFoundationSection: React.FC = () => {
   const [selectedDetail, setSelectedDetail] = useState<LegalDetails | null>(null);
 
-  const legalDetails: LegalDetails[] = [
-    {
-      id: 1,
-      icon: BookOpen,
-      title: "Ley de Cámaras de Comercio",
-      category: "Normativa Base",
-      color: "bg-gray-950",
-      description: "Fundamento legal que regula la organización y funcionamiento de las Cámaras de Comercio",
-      details: {
-        norma: "Ley 106",
-        publicacion: "Registro Oficial 131",
-        fecha: "7 de Marzo de 1969",
-        status: "Vigente",
-        alcance: "Nacional"
-      },
-      keyPoints: [
-        "Regula la constitución de Cámaras de Comercio",
-        "Establece derechos y obligaciones",
-        "Define estructura organizacional"
-      ]
-    },
-    {
-      id: 2,
-      icon: Gavel,
-      title: "Marco Jurídico",
-      category: "Estructura Legal",
-      color: "bg-gray-800",
-      description: "Conjunto de normas que rigen el funcionamiento de la Cámara de Comercio",
-      details: {
-        baseLegal: [
-          "Ley de Cámaras de Comercio",
-          "Código Civil",
-          "Código de Comercio",
-          "Estatutos Internos"
-        ],
-        personalidadJuridica: "Derecho Privado",
-        representacionLegal: "Presidente de la Cámara"
-      },
-      keyPoints: [
-        "Personería jurídica independiente",
-        "Autonomía administrativa",
-        "Representación legal definida"
-      ]
-    },
-    {
-      id: 3,
-      icon: Building,
-      title: "Constitución Institucional",
-      category: "Fundación",
-      color: "bg-gray-950",
-      description: "Detalles de la constitución de la Cámara de Comercio de La Maná",
-      details: {
-        domicilio: "La Maná, Cantón La Maná, Provincia de Cotopaxi",
-        capitalInicial: "300,000 sucres",
-        comerciantesMinimos: "20",
-        tipoInstitucion: "Asociación Gremial"
-      },
-      keyPoints: [
-        "Fundada con capital mínimo establecido",
-        "Representación cantonal",
-        "Afiliación voluntaria de comerciantes"
-      ]
-    },
-    {
-      id: 4,
-      icon: FileText,
-      title: "Estatutos Internos",
-      category: "Reglamentación",
-      color: "bg-gray-950",
-      description: "Documentos que regulan el funcionamiento interno de la institución",
-      details: {
-        capitulos: [
-          "Constitución y Domicilio",
-          "Fines y Objetivos",
-          "Estructura Administrativa",
-          "Derechos y Obligaciones de Socios"
-        ],
-        ultimaActualizacion: "2023",
-        aprobadoPor: "Asamblea General"
-      },
-      keyPoints: [
-        "Definen estructura organizacional",
-        "Establecen procedimientos internos",
-        "Regulan derechos de asociados"
-      ]
-    }
-  ];
+  
 
   return (
     <section className="bg-gray-100 text-gray-900">

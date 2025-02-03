@@ -1,6 +1,6 @@
 
 
-import Stats from '@/components/statss';
+
 import Services from '@/components/services';
 import Testimonials from '@/components/testimonials';
 import TeamMembers from '@/components/team';

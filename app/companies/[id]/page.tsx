@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import {
-  Building2, Mail, Phone, MapPin, Users, Calendar, Award,
+  Mail, Phone, MapPin, Users, Calendar, Award,
   Target, Globe, Star, ChevronRight, ShoppingCart,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -220,27 +220,24 @@ const CompanyDetail = () => {
   const params = useParams();
   const id = params.id as string;
   const [company, setCompany] = useState<Company | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
 
   useEffect(() => {
     const fetchCompany = async () => {
-      try {
-        const response = await fetch(`http://localhost:8000/api/empresas/${id}/`);
+    const response = await fetch(`http://localhost:8000/api/empresas/${id}/`);
         if (!response.ok) throw new Error('Failed to fetch company');
         const data = await response.json();
         setCompany(data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred');
-      } finally {
-        setLoading(false);
-      }
+      
     };
-
+  
     fetchCompany();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   if (!company) return null;
+
+
 
   return (
     <div className="min-h-screen bg-white">

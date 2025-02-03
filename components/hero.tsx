@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Building2, Users, Trophy, ChevronRight } from 'lucide-react';
+import { Building2, Users, Trophy, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 

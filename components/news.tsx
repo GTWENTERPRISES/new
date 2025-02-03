@@ -1,11 +1,11 @@
 "use client"
-
+import Image from 'next/image';
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { ChevronRight, X, Calendar, ExternalLink } from "lucide-react"
+import { ChevronRight,Calendar, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+
 import {
   Dialog,
   DialogContent,
@@ -92,11 +92,8 @@ const News: React.FC = () => {
             >
               <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-gray-900 border-gray-800">
                 <div className="relative overflow-hidden h-48">
-                  <img
-                    src={news.foto || "/placeholder.svg"}
-                    alt={news.titulo}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
+             
+<Image src={news.foto} alt={news.titulo} width={500} height={300} />
                 </div>
                 <CardHeader>
                   <div className="flex items-center mb-2">
@@ -151,11 +148,13 @@ const News: React.FC = () => {
                 </DialogDescription>
               </DialogHeader>
               <div className="mb-6">
-                <img
-                  src={selectedNews.foto || "/placeholder.svg"}
-                  alt={selectedNews.titulo}
-                  className="w-full h-64 object-cover rounded-md"
-                />
+              <Image
+  src={selectedNews.foto}
+  alt={selectedNews.titulo}
+  width={500}
+  height={256}
+  className="object-cover rounded-md"
+/>
               </div>
               <p className="text-gray-300 mb-6">{selectedNews.contenido}</p>
               <DialogFooter>

@@ -321,7 +321,7 @@ const Companies: React.FC = () => {
             <div className="space-y-2">
               {selectedEmpresa.testimonios?.map((testimonio, index) => (
                 <div key={index} className="text-gray-600">
-                  <p className="italic">"{testimonio.comentario}"</p>
+                  <p className="italic">{testimonio.comentario}</p>
                   <p className="font-semibold text-red-600">- {testimonio.nombre}</p>
                 </div>
               )) || <p className="text-gray-400">No hay testimonios disponibles.</p>}

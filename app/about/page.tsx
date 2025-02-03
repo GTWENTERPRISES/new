@@ -2,17 +2,13 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
-  Building2, 
-  Users, 
+  Building2,  
   TrendingUp, 
-  Award, 
   Target, 
   HandshakeIcon,
   Globe,
-  Star,
   Rocket,
   MapPin,
-  CheckCircle,
   Shield,
   Zap
 } from "lucide-react";
