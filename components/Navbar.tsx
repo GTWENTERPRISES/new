@@ -50,7 +50,7 @@ const Navbar = () => {
             
             <div className="relative overflow-hidden rounded-lg">
          
-              <Image src="https://scontent.fatf4-1.fna.fbcdn.net/v/t39.30808-6/462006199_3751298228463013_4260838978055540159_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ORoWubyyw4gQ7kNvgELpi75&_nc_zt=23&_nc_ht=scontent.fatf4-1.fna&_nc_gid=Acful8A8KVybq8tQ8VIOIXD&oh=00_AYBLXPVpVrW8AC0ark6W3Wo_cC8oak8-QYZJupJ1OxJAZA&oe=679D8CCE" alt="Logo" width={100} height={50} />
+              <Image src="https://res.cloudinary.com/dqnjw25rj/image/upload/v1738702145/empresas/zoeb19ews9gqsyv3znvc.png" alt="Logo" width={100} height={50} />
             </div>
             <div className="ml-3">
               <span className="text-xl font-bold bg-white bg-clip-text text-transparent">
