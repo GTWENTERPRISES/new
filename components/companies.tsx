@@ -53,8 +53,8 @@ const Companies: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
   const [selectedEmpresa, setSelectedEmpresa] = useState<Empresa | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
-  const [filterActive, setFilterActive] = useState<boolean | null>(null)
-  const [filterType, setFilterType] = useState<"pequeña" | "mediana" | "grande" | null>(null)
+  const [filterActive] = useState<boolean | null>(null)
+  const [filterType] = useState<"pequeña" | "mediana" | "grande" | null>(null)
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
