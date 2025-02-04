@@ -76,13 +76,12 @@ interface ApiResponse {
 }
 
 const Companies: React.FC = () => {
-  const [empresas, setEmpresas] = useState<Empresa[]>([])
+  const [setEmpresas] = useState<Empresa[]>([])
   const [filteredEmpresas, setFilteredEmpresas] = useState<Empresa[]>([])
   const [error, setError] = useState<string | null>(null)
   const [selectedEmpresa, setSelectedEmpresa] = useState<Empresa | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
-  const [filterActive] = useState<boolean | null>(null)
-  const [filterType] = useState<"pequeña" | "mediana" | "grande" | null>(null)
+
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -107,7 +106,7 @@ const Companies: React.FC = () => {
         if (!response.ok) throw new Error("Failed to fetch")
 
         const data: ApiResponse = await response.json()
-        setEmpresas(data.results)
+       
         setFilteredEmpresas(data.results)
       } catch (error) {
         setError("Error fetching empresas")
