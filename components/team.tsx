@@ -114,7 +114,7 @@ const TeamMembers = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              //sdf
+             
               <Card
                 className="group cursor-pointer hover:border-red-600 transition-colors duration-300"
                 onClick={() => setSelectedMember(member)}
