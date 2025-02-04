@@ -76,7 +76,7 @@ interface ApiResponse {
 }
 
 const Companies: React.FC = () => {
-  const [setEmpresas] = useState<Empresa[]>([])
+ 
   const [filteredEmpresas, setFilteredEmpresas] = useState<Empresa[]>([])
   const [error, setError] = useState<string | null>(null)
   const [selectedEmpresa, setSelectedEmpresa] = useState<Empresa | null>(null)
