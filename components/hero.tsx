@@ -77,7 +77,7 @@ const HeroSection = () => {
               </Link>
 
               <Link
-                href="/membership"
+                href="/contact"
                 className="group inline-flex items-center gap-2 border-2 border-blue-800 text-blue-950 px-8 py-4 rounded-lg font-semibold transition-all hover:bg-blue-50"
               >
                 <span className="flex items-center gap-2">
