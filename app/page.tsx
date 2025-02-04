@@ -18,7 +18,7 @@ import HistoriaCamaraComercio from '@/components/history';
 const Index = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white overflow-hidden">
-      <StatsSection/>
+    
       <LegalFoundationSection/>
       <EmpresaList/>
       <Services/>
