@@ -211,7 +211,7 @@ const CompanyDetail = () => {
   const params = useParams();
   const id = params.id as string;
   const [company, setCompany] = useState<Company | null>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+ 
 
   useEffect(() => {
     const fetchCompany = async () => {
