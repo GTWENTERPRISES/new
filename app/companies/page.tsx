@@ -107,7 +107,7 @@ const Companies: React.FC = () => {
   useEffect(() => {
     const fetchEmpresas = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/empresas/", {
+        const response = await fetch("https://back-main-theta.vercel.app/api/empresas/", {
           headers: { Accept: "application/json" },
         })
 

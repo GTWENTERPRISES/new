@@ -40,7 +40,7 @@ const News: React.FC = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/noticias/")
+        const response = await fetch("https://back-main-theta.vercel.app/api/noticias/")
         if (!response.ok) {
           throw new Error("Error fetching news")
         }

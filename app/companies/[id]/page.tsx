@@ -224,7 +224,7 @@ const CompanyDetail = () => {
 
   useEffect(() => {
     const fetchCompany = async () => {
-    const response = await fetch(`http://localhost:8000/api/empresas/${id}/`);
+    const response = await fetch(`https://back-main-theta.vercel.app/api/empresas/${id}/`);
         if (!response.ok) throw new Error('Failed to fetch company');
         const data = await response.json();
         setCompany(data);
