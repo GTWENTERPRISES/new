@@ -376,33 +376,7 @@ const Companies: React.FC = () => {
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" size={20} />
               </div>
-              <div className="flex gap-4">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="border-gray-300 bg-white text-gray-800 hover:bg-gray-300">
-                      <Filter className="mr-2 h-4 w-4" /> Estado
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white text-gray-800 border-gray-300">
-                    <DropdownMenuItem onClick={() => setFilterActive(null)}>Todos</DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setFilterActive(true)}>Activos</DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setFilterActive(false)}>Inactivos</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="border-gray-300 bg-white text-gray-800 hover:bg-gray-300">
-                      <Building className="mr-2 h-4 w-4" /> Tipo
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white text-gray-800 border-gray-300">
-                    <DropdownMenuItem onClick={() => setFilterType(null)}>Todas</DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setFilterType("pequeña")}>Pequeñas</DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setFilterType("mediana")}>Medianas</DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setFilterType("grande")}>Grandes</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
+             
             </div>
           </CardContent>
         </Card>
