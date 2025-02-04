@@ -50,7 +50,7 @@ interface Company {
   };
   direccion: string;
   telefono: string;
-  email: string;
+  correo: string;
   sitio_web: string;
   logo: string;
   galeria: string[];
@@ -195,7 +195,7 @@ const ProductModal = ({ product, company }: { product: Product; company: Company
             </Button>
             <Button 
               className="w-full bg-blue-950 hover:bg-blue-900 text-white"
-              onClick={() => window.open(`mailto:${company.email}`, '_blank')}
+              onClick={() => window.open(`mailto:${company.correo}`, '_blank')}
             >
               <Mail className="w-4 h-4 mr-2" />
               Contactar Vendedor
@@ -322,8 +322,8 @@ const CompanyDetail = () => {
                     <Mail className="text-red-600 w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Email</p>
-                    <span className="font-medium">{company.email}</span>
+                    <p className="text-sm text-gray-500">Correo</p>
+                    <span className="font-medium">{company.correo}</span>
                   </div>
                 </div>
                 <Button 
@@ -336,23 +336,7 @@ const CompanyDetail = () => {
               </CardContent>
             </Card>
 
-            {/* Company Stats */}
-            <Card className="shadow-lg border-0">
-              <CardContent className="p-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-6 bg-blue-950 rounded-xl text-white">
-                    <Calendar className="w-8 h-8 mx-auto mb-2" />
-                    <p className="text-sm opacity-75">Fundada</p>
-                    <p className="font-semibold text-lg">{company.fundada}</p>
-                  </div>
-                  <div className="text-center p-6 bg-red-600 rounded-xl text-white">
-                    <Users className="w-8 h-8 mx-auto mb-2" />
-                    <p className="text-sm opacity-75">Empleados</p>
-                    <p className="font-semibold text-lg">{company.empleados}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+           
 
             {/* Certifications */}
             {company.certificaciones && company.certificaciones.length > 0 && (
@@ -411,18 +395,7 @@ const CompanyDetail = () => {
 
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-12">
-            {/* About Section */}
-            <Card className="shadow-lg border-0">
-              <CardHeader className="bg-blue-950 text-white">
-                <CardTitle>Acerca de la Empresa</CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <p className="text-gray-700 leading-relaxed">
-                  {company.longDescription}
-                </p>
-              </CardContent>
-            </Card>
-
+           
             {/* Products Section */}
             <div className="space-y-6">
               <div className="flex items-center justify-between">
