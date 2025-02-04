@@ -118,15 +118,7 @@ const Companies: React.FC = () => {
     fetchEmpresas()
   }, [])
 
-  useEffect(() => {
-    const filtered = empresas.filter(
-      (empresa) =>
-        empresa.nombre.toLowerCase().includes(searchTerm.toLowerCase()) &&
-        (filterActive === null || empresa.activa === filterActive) &&
-        (filterType === null || empresa.tipo === filterType),
-    )
-    setFilteredEmpresas(filtered)
-  }, [searchTerm, filterActive, filterType, empresas])
+  
 
   if (error) {
     return (
