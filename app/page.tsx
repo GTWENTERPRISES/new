@@ -6,7 +6,7 @@ import Testimonials from '@/components/testimonials';
 import TeamMembers from '@/components/team';
 import EmpresaList from '@/components/companies';
 import News from '@/components/news';
-import StatsSection from '@/components/StatsSection';
+
 import LegalFoundationSection from '@/components/found';
 import ValoresInstitucionales from '@/components/values';
 import EstructuraOrganizacional from '@/components/structure';
