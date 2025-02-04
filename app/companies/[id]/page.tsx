@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import {
   Mail, Phone, MapPin, Users, Calendar, Award,
   Target, Globe, Star, ChevronRight, ShoppingCart,
-  Camera, ArrowRight, ExternalLink
+  Camera, ArrowRight
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from "@/components/ui/button";
