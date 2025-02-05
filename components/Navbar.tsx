@@ -93,7 +93,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className={`md:hidden fixed inset-0 top-[57px] bg-gray-950/98 backdrop-blur-lg transform transition-transform duration-300 ${
+        <div className={`md:hidden fixed inset-0 top-[57px] bg-blue-950/98 backdrop-blur-lg transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col p-6 space-y-2">
