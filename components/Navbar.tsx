@@ -20,7 +20,6 @@ const Navbar = () => {
   const navItems = [
     { name: "Inicio", path: "/", icon: <Home size={18} /> },
     { name: "Empresas", path: "/companies", icon: <Building2 size={18} /> },
-    
     { name: "Sobre Nosotros", path: "/about", icon: <Info size={18} /> },
     { name: "Contacto", path: "/contact", icon: <Contact size={18} /> },
   ];
@@ -47,9 +46,7 @@ const Navbar = () => {
             href="/" 
             className="flex items-center group"
           >
-            
             <div className="relative overflow-hidden rounded-lg">
-         
               <Image src="https://res.cloudinary.com/dqnjw25rj/image/upload/v1738702145/empresas/zoeb19ews9gqsyv3znvc.png" alt="Logo" width={70} height={20} />
             </div>
             <div className="ml-3">
@@ -62,7 +59,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-        
+          {/* Enlaces de navegación para desktop */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -82,7 +79,7 @@ const Navbar = () => {
             ))}
           </div>
 
-
+          {/* Botón de menú móvil */}
           <button
             className="md:hidden relative w-10 h-10 flex items-center justify-center text-white hover:text-red-600 transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
@@ -92,8 +89,8 @@ const Navbar = () => {
           </button>
         </div>
 
-
-        <div className={`md:hidden fixed inset-0 top-[57px] bg-blue-950/98 backdrop-blur-lg transform transition-transform duration-300 ${
+        {/* Menú móvil */}
+        <div className={`md:hidden fixed inset-0 top-[57px] bg-blue-950 transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col p-6 space-y-2">
@@ -102,7 +99,7 @@ const Navbar = () => {
                 key={item.path}
                 href={item.path}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center p-3 text-gray-300 rounded-lg hover:text-red-600 hover:bg-white/5 transition-all duration-300 group"
+                className="flex items-center p-3 text-white rounded-lg hover:text-red-600 hover:bg-white/5 transition-all duration-300 group"
                 style={{
                   animationDelay: `${index * 100}ms`,
                 }}
@@ -117,18 +114,16 @@ const Navbar = () => {
                 />
               </Link>
             ))}
-            
 
             <div className="pt-6 mt-6 border-t border-white/10">
-              <p className="text-sm text-gray-400 mb-4">Síguenos en redes sociales</p>
+              <p className="text-sm text-white mb-4">Síguenos en redes sociales</p>
               <div className="flex items-center space-x-4">
                 <a 
                   href="#" 
-                  className="p-2 text-gray-400 hover:text-red-600 hover:bg-white/5 rounded-lg transition-colors duration-300"
+                  className="p-2 text-white hover:text-red-600 hover:bg-white/5 rounded-lg transition-colors duration-300"
                 >
                   <ExternalLink size={20} />
                 </a>
-     
               </div>
             </div>
           </div>
