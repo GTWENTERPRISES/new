@@ -116,14 +116,7 @@ const News: React.FC = () => {
                     >
                       Leer más <ChevronRight size={18} className="ml-1" />
                     </Button>
-                    <a
-                      href={news.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-500 transition-colors"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
+                   
                   </div>
                 </CardContent>
               </Card>
@@ -165,11 +158,7 @@ const News: React.FC = () => {
                 >
                   Cerrar
                 </Button>
-                <Button asChild className="bg-red-600 text-white hover:bg-red-700">
-                  <a href={selectedNews.link} target="_blank" rel="noopener noreferrer">
-                    Ir a la noticia <ExternalLink size={18} className="ml-2" />
-                  </a>
-                </Button>
+                
               </DialogFooter>
             </>
           )}
