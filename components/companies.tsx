@@ -273,11 +273,11 @@ const Companies: React.FC = () => {
                     </div>
                     <p className="text-gray-600 mb-4">{selectedEmpresa.descripcion}</p>
                     <Link
-                      href={selectedEmpresa.sitio_web || "#"}
+                      href={`/companies/${selectedEmpresa.id}`}
                       target="_blank"
                       className="inline-flex items-center text-red-600 hover:text-red-700 transition-colors"
                     >
-                      Visitar Sitio Web
+                      Más información
                       <ExternalLink className="ml-2 w-4 h-4" />
                     </Link>
                   </TabsContent>
