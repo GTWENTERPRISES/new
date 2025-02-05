@@ -90,7 +90,7 @@ const News: React.FC = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-gray-900 border-gray-800">
+              <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-gray-900">
                 <div className="relative overflow-hidden h-48">
              
 <Image src={news.foto} alt={news.titulo} width={500} height={300} />
