@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { ChevronRight,Calendar, ExternalLink } from "lucide-react"
+import { ChevronRight,Calendar} from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
