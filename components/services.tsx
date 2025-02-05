@@ -173,7 +173,7 @@ const Services = () => {
             >
               Cancelar
             </Button>
-            <Button className="bg-red-600 text-white hover:bg-red-700">Contratar Servicio</Button>
+          
           </DialogFooter>
         </DialogContent>
       </Dialog>
