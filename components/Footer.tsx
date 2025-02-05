@@ -14,15 +14,10 @@ const Footer = () => {
               Impulsando el desarrollo empresarial y económico de nuestra región desde hace más de 20 años.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-red-600 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/camaradecomerciodelamana.ciudadlamana/?locale=es_LA" className="hover:text-red-600 transition-colors" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="hover:text-red-600 transition-colors" aria-label="Twitter">
-                <Twitter size={24} />
-              </a>
-              <a href="#" className="hover:text-red-600 transition-colors" aria-label="Instagram">
-                <Instagram size={24} />
-              </a>
+           
             </div>
           </div>
 
