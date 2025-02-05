@@ -115,17 +115,7 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <div className="pt-6 mt-6 border-t border-white/10">
-              <p className="text-sm text-white mb-4">Síguenos en redes sociales</p>
-              <div className="flex items-center space-x-4">
-                <a 
-                  href="#" 
-                  className="p-2 text-white hover:text-red-600 hover:bg-white/5 rounded-lg transition-colors duration-300"
-                >
-                  <ExternalLink size={20} />
-                </a>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
