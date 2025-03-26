@@ -14,13 +14,13 @@ const HeroSection = () => {
   const features = [
     {
       icon: Building2,
-      value: '100+',
+      value: '20+',
       description: 'Empresas Registradas',
       subtext: 'Líderes del mercado'
     },
     {
       icon: Users,
-      value: '100+',
+      value: '20+',
       description: 'Miembros Activos',
       subtext: 'Red empresarial'
     },
