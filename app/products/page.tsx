@@ -42,7 +42,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://back-main-theta.vercel.app/api/productos/');
+        const response = await fetch('https://back-main-l7ve.vercel.app/api/productos/');
         if (!response.ok) throw new Error('Failed to fetch products');
         const data = await response.json();
         setProducts(data.results);
@@ -56,7 +56,7 @@ const Products = () => {
 
     const fetchCompanies = async () => {
       try {
-        const response = await fetch('https://back-main-theta.vercel.app/api/empresas/');
+        const response = await fetch('https://back-main-l7ve.vercel.app/api/empresas/');
         if (!response.ok) throw new Error('Failed to fetch companies');
         const data = await response.json();
         setCompanies(data.results);

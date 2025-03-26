@@ -94,7 +94,7 @@ const Contact = () => {
     setSubmitStatus({ type: "", message: "" });
   
     try {
-      await fetch('https://back-main-theta.vercel.app/api/mensajes-contacto/', {
+      await fetch('https://back-main-l7ve.vercel.app/api/mensajes-contacto/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

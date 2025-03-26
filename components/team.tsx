@@ -45,7 +45,7 @@ const TeamMembers = () => {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await fetch("https://back-main-theta.vercel.app/api/equipos/")
+        const response = await fetch("https://back-main-l7ve.vercel.app/api/equipos/")
         if (!response.ok) throw new Error("Failed to fetch team members")
         const data: APIResponse = await response.json()
         setMembers(data.results)

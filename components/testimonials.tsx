@@ -20,7 +20,7 @@ const TestimonialsCarousel: React.FC = () => {
     const fetchTestimonios = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('https://back-main-theta.vercel.app/api/testimonios/');
+        const response = await fetch('https://back-main-l7ve.vercel.app/api/testimonios/');
         if (!response.ok) throw new Error('Error al cargar los testimonios');
         const data = await response.json();
         setTestimonios(data.results);

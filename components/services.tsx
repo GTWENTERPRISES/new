@@ -53,7 +53,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch("https://back-main-theta.vercel.app/api/servicios/")
+        const response = await fetch("https://back-main-l7ve.vercel.app/api/servicios/")
         if (!response.ok) throw new Error("Failed to fetch services")
         const data: APIResponse = await response.json()
         setServices(data.results)
