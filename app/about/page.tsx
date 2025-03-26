@@ -26,7 +26,7 @@ const About = () => {
   const stats = [
     {
       title: "Empresas Asociadas",
-      value: "150+",
+      value: "20+",
       icon: Building2,
       description: "Empresas líderes comprometidas con el desarrollo económico de La Maná",
       color: "bg-blue-600" // Changed from blue-950 to blue-600
