@@ -10,7 +10,7 @@ import {
   Info, 
   Contact,
   ChevronRight,
-  ExternalLink
+  
 } from "lucide-react";
 
 const Navbar = () => {
