@@ -51,34 +51,34 @@ const EstructuraOrganizacional: React.FC = () => {
   const directorio: MiembroDirectorio[] = [
     {
       id: 1,
-      nombre: "Juan Pérez",
+      nombre: "Gonzalo Llumitaxi",
       cargo: "Presidente",
       icon: Users,
-      descripcion: "Lidera la visión estratégica y representa a la organización en eventos de alto nivel.",
+      descripcion: "Presidente de la Cámara de Comercio La Maná, periodo 1994-1996.",
       responsabilidades: [
-        "Definir la estrategia a largo plazo",
-        "Representar a la organización en eventos clave",
+        "Liderar la visión estratégica de la Cámara",
+        "Representar a la organización en eventos oficiales",
         "Supervisar el desempeño general de la cámara",
       ],
     },
     {
       id: 2,
-      nombre: "María González",
+      nombre: "Luis Chanange",
       cargo: "Vicepresidente",
       icon: Briefcase,
-      descripcion: "Apoya al presidente y supervisa las operaciones diarias de la organización.",
+      descripcion: "Vicepresidente de la Cámara de Comercio La Maná, apoya las iniciativas del presidente.",
       responsabilidades: [
         "Gestionar las operaciones diarias",
         "Implementar iniciativas estratégicas",
-        "Coordinar con los diferentes departamentos",
+        "Sustituir al presidente en su ausencia",
       ],
     },
     {
       id: 3,
-      nombre: "Carlos Rodríguez",
+      nombre: "Jaime Zapata",
       cargo: "Secretario",
       icon: FileText,
-      descripcion: "Gestiona la documentación oficial y coordina las comunicaciones internas.",
+      descripcion: "Secretario de la Cámara de Comercio La Maná, encargado de la documentación oficial.",
       responsabilidades: [
         "Mantener registros y actas de reuniones",
         "Gestionar la correspondencia oficial",
@@ -87,10 +87,10 @@ const EstructuraOrganizacional: React.FC = () => {
     },
     {
       id: 4,
-      nombre: "Ana Martínez",
+      nombre: "Alejandro Iza J.",
       cargo: "Tesorero",
       icon: Award,
-      descripcion: "Supervisa las finanzas y asegura la salud económica de la organización.",
+      descripcion: "Tesorero de la Cámara de Comercio La Maná, responsable de las finanzas de la organización.",
       responsabilidades: [
         "Gestionar el presupuesto anual",
         "Supervisar ingresos y gastos",
@@ -182,7 +182,7 @@ const EstructuraOrganizacional: React.FC = () => {
             Nuestra <span className="text-red-600">Estructura</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Descubre cómo nuestra organización impulsa el desarrollo comercial de La Maná
+            Fundada el 26 de Octubre de 1994, la Cámara de Comercio La Maná impulsa el desarrollo comercial de nuestra región
           </p>
         </motion.div>
 

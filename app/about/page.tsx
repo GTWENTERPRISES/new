@@ -10,7 +10,9 @@ import {
   Rocket,
   MapPin,
   Shield,
-  Zap
+  Zap,
+  FileText,
+  CheckCircle
 } from "lucide-react";
 import { useRef } from 'react';
 
@@ -99,6 +101,31 @@ const About = () => {
         "Desarrollo comunitario"
       ]
     },
+  ];
+
+  // Derechos de los socios
+  const derechosSocios = [
+    "Elegir y ser elegido para cualquier dignidad.",
+    "Usar como referencia a la Cámara de Comercio.",
+    "Hacer constar su calidad de socio en los papeles de comercio y en su propaganda.",
+    "Obtener de la Cámara los informes que estuviere en posibilidad de suministrar.",
+    "Pedir la dirección, los reclamos o quejas contra los afiliados o contra comerciantes dentro o fuera de la República, donde se hubieren.",
+    "Cumplir con las transacciones comerciales válidamente celebradas.",
+    "Someter a conocimiento y resolución de la comisión de Reclamos y Arbitraje, las diferencias que susciten entre los afiliados.",
+    "Solicitar al directorio la realización de las gestiones para la efectividad de sus derechos.",
+    "Concurrir a las sesiones de Asamblea General, del directorio o de las comisiones cuando formen parte de ellas.",
+    "Usar los locales de la Cámara para reuniones de carácter comercial u otro evento con autorización del presidente."
+  ];
+
+  // Obligaciones de los socios
+  const obligacionesSocios = [
+    "Pagar las cuotas ordinarias y extraordinarias.",
+    "Desempeñar los cargos, comisiones para los cuales fueron elegidos, con puntual responsabilidad, honestidad y equidad.",
+    "Suministrar a la Cámara los informes y datos que ella solicite.",
+    "Asistir a las Asambleas Generales, del Directorio y de las Comisiones.",
+    "Participar con su voto, el mismo que es indelegable. El cónyuge o conviviente del socio activo puede asistir como representante autorizado por escrito.",
+    "Los socios deberán concurrir con los cargos en decencia.",
+    "Cumplir con las leyes, el presente Estatuto, Reglamentos Internos y Resoluciones."
   ];
 
   return (
@@ -257,7 +284,7 @@ const About = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           <div className="bg-blue-950 rounded-3xl p-8 border-0 border-blue-700 hover:border-red-600 transition-all hover:scale-105">
             <h2 className="text-3xl font-bold text-white mb-6">Misión</h2>
@@ -270,6 +297,48 @@ const About = () => {
             <p className="text-white leading-relaxed">
               Ser reconocidos como la institución líder en el desarrollo empresarial de La Maná, destacando por nuestra excelencia en servicios y nuestra contribución al crecimiento económico sostenible de la región, creando un entorno propicio para la innovación y la colaboración.
             </p>
+          </div>
+        </motion.section>
+
+        {/* Nueva sección: Derechos y Obligaciones */}
+        <motion.section 
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-blue-950 mb-12 text-center">
+            Derechos y Obligaciones
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-blue-950 p-8 rounded-3xl text-white border-0 hover:border-red-600 transition-all hover:scale-105"
+            >
+              <FileText className="w-16 h-16 text-red-600 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Son Derechos de los Socios</h3>
+              <ul className="text-white list-disc list-inside space-y-2">
+                {derechosSocios.map((derecho, idx) => (
+                  <li key={idx} className="leading-relaxed">{derecho}</li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-blue-950 p-8 rounded-3xl text-white border-0 hover:border-red-600 transition-all hover:scale-105"
+            >
+              <CheckCircle className="w-16 h-16 text-red-600 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Los Socios Tienen las Siguientes Obligaciones</h3>
+              <ul className="text-white list-disc list-inside space-y-2">
+                {obligacionesSocios.map((obligacion, idx) => (
+                  <li key={idx} className="leading-relaxed">{obligacion}</li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </motion.section>
       </div>
