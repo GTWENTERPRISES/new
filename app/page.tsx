@@ -11,6 +11,7 @@ import LegalFoundationSection from '@/components/found';
 import ValoresInstitucionales from '@/components/values';
 import EstructuraOrganizacional from '@/components/structure';
 import HistoriaCamaraComercio from '@/components/history';
+import CityHistory from '@/components/city-history';
 
 
 // ... (remaining imports and data definitions)
@@ -21,6 +22,7 @@ const Index = () => {
     
       <LegalFoundationSection/>
       <EmpresaList/>
+      <CityHistory/>
       <Services/>
       
       <ValoresInstitucionales/>
