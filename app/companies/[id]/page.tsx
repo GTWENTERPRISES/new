@@ -127,10 +127,12 @@ const ProductModal = ({ product, company }: { product: Product; company: Company
         <DialogTitle className="text-3xl font-bold text-blue-950">
           {product.nombre}
         </DialogTitle>
-        <DialogDescription className="text-gray-600 flex items-center gap-2">
-          Por {company.nombre}
+        <div className="flex items-center gap-2">
+          <DialogDescription>
+            Por {company.nombre}
+          </DialogDescription>
           <Badge className="bg-red-600">{company.categoria_nombre}</Badge>
-        </DialogDescription>
+        </div>
       </DialogHeader>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">

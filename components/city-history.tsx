@@ -208,54 +208,7 @@ const CityHistory: React.FC = () => {
           </div>
         </div>
 
-        {/* Agricultural Products */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-blue-950 p-6 rounded-xl text-white"
-        >
-          <h2 className="text-2xl font-bold mb-6 text-red-600">Productos Agrícolas</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="flex flex-col items-center">
-              <div className="bg-red-600 p-3 rounded-full mb-3">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-center">Plátano</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-red-600 p-3 rounded-full mb-3">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-center">Orito</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-red-600 p-3 rounded-full mb-3">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-center">Yuca</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-red-600 p-3 rounded-full mb-3">
-                <Coffee className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-center">Cacao</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-red-600 p-3 rounded-full mb-3">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-center">Tabaco</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-red-600 p-3 rounded-full mb-3">
-                <Coffee className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-center">Café</p>
-            </div>
-          </div>
-        </motion.div>
+        
 
         {/* Foundation Date */}
         <motion.div

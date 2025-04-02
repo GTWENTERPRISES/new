@@ -5,9 +5,8 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Services from '@/components/services';
+
 import Testimonials from '@/components/testimonials';
-import TeamMembers from '@/components/team';
 import EmpresaList from '@/components/companies';
 import News from '@/components/news';
 import LegalFoundationSection from '@/components/found';
@@ -16,6 +15,7 @@ import EstructuraOrganizacional from '@/components/structure';
 import HistoriaCamaraComercio from '@/components/history';
 import CityHistory from '@/components/city-history';
 import { ArrowUp } from 'lucide-react';
+
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -26,17 +26,14 @@ const Index = () => {
     const handleScroll = () => {
       // Show scroll-to-top button after scrolling down 500px
       setShowScrollTop(window.scrollY > 500);
-      
-      // We're removing the active section tracking since it's not being used
-      // If you need this functionality later, you can add it back
     };
 
     window.addEventListener('scroll', handleScroll);
     
-    // Simulate loading state
+    // Simulate loading state - reduced time for better UX
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1000);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -88,43 +85,54 @@ const Index = () => {
       <div className="min-h-screen bg-white text-gray-900 overflow-hidden">
         {/* Main content with sections */}
         <main>
-          <section id="foundation" className="section-container">
-            <LegalFoundationSection />
-          </section>
+          {/* Hero Section */}
           
-          <section id="empresas" className="section-container bg-gray-50">
+          
+          {/* Empresas Section */}
+          <section id="empresas" className="section-container bg-gray-50 py-20">
             <EmpresaList />
           </section>
           
-          <section id="city" className="section-container">
-            <CityHistory />
-          </section>
+          {/* Institutional Information Group */}
+          <div className="bg-gradient-to-b from-white to-gray-50 py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">Nuestra Institución</h2>
+                <div className="w-20 h-1 bg-red-600 mx-auto"></div>
+                <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+                  Conoce más sobre nuestra historia, valores y estructura que nos definen como la Cámara de Comercio de La Maná.
+                </p>
+              </div>
+            </div>
+            
+            <section id="foundation" className="section-container py-16">
+              <LegalFoundationSection />
+            </section>
+            
+            <section id="historia" className="section-container bg-gray-50 py-16">
+              <HistoriaCamaraComercio />
+            </section>
+            
+            <section id="city" className="section-container py-16">
+              <CityHistory />
+            </section>
+            
+            <section id="estructura" className="section-container bg-gray-50 py-16">
+              <EstructuraOrganizacional />
+            </section>
+            
+            <section id="valores" className="section-container py-16">
+              <ValoresInstitucionales />
+            </section>
+          </div>
           
-          <section id="services" className="section-container bg-gray-50">
-            <Services />
-          </section>
-          
-          <section id="valores" className="section-container">
-            <ValoresInstitucionales />
-          </section>
-          
-          <section id="news" className="section-container bg-gray-50">
+          {/* News Section */}
+          <section id="news" className="section-container bg-gray-50 py-20">
             <News />
           </section>
           
-          <section id="estructura" className="section-container">
-            <EstructuraOrganizacional />
-          </section>
-          
-          <section id="historia" className="section-container bg-gray-50">
-            <HistoriaCamaraComercio />
-          </section>
-          
-          <section id="team" className="section-container">
-            <TeamMembers />
-          </section>
-          
-          <section id="testimonials" className="section-container bg-gray-50">
+          {/* Testimonials Section */}
+          <section id="testimonials" className="section-container py-20">
             <Testimonials />
           </section>
         </main>
@@ -138,7 +146,7 @@ const Index = () => {
               exit={{ opacity: 0, y: 20 }}
               onClick={scrollToTop}
               className="fixed bottom-8 right-8 p-4 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition-colors z-40"
-              aria-label="Scroll to top"
+              aria-label="Volver arriba"
             >
               <ArrowUp size={24} />
             </motion.button>
