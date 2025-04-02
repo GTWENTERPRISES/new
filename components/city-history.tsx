@@ -9,9 +9,7 @@ import {
   Mountain,
   Thermometer,
   Compass,
-  TreePine,
-  Coffee,
-  Leaf
+  TreePine
 } from 'lucide-react';
 
 interface CityDetail {

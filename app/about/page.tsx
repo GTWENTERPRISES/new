@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { 
   Building2,  
   Award, 
@@ -8,7 +8,6 @@ import {
   HandshakeIcon,
   Globe,
   Rocket,
-  MapPin,
   Shield,
   Zap,
   FileText,
@@ -18,15 +17,15 @@ import {
 } from "lucide-react";
 import { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const About = () => {
   const ref = useRef(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"]
   });
-
-  const backgroundProgress = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
 
   // Datos institucionales
   const stats = [
@@ -380,20 +379,20 @@ const About = () => {
                 Únete a la Cámara de Comercio de La Maná y accede a beneficios exclusivos, networking estratégico y representación efectiva para tu negocio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <Link 
                   href="/contact" 
                   className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg hover:-translate-y-1"
                 >
                   <span>Solicitar Afiliación</span>
                   <ArrowRight size={18} />
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/companies" 
                   className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg hover:-translate-y-1"
                 >
                   <span>Ver Empresas Afiliadas</span>
                   <Building2 size={18} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

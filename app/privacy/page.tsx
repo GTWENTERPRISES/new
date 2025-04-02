@@ -127,7 +127,7 @@ const PrivacyPolicy = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-blue-950 mb-4">Cambios a esta Política</h2>
                 <p className="mb-4">
-                  Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "última actualización".
+                  Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de &ldquo;última actualización&rdquo;.
                 </p>
               </section>
 
