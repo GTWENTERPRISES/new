@@ -90,7 +90,7 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
       logros: [
         "Creación de estatutos",
         "Primera directiva conformada",
-        "Establecimiento en local comercial 'SORAMA'"
+        "Establecimiento en local comercial &lsquo;SORAMA&rsquo;"
       ]
     },
     {
@@ -145,7 +145,7 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
           <h2 className="text-3xl font-bold mb-4 text-red-600">Acta de Fundación</h2>
           <p className="mb-4">
             Siendo las veinte y un horas del primero de septiembre de mil novecientos noventa y cuatro en el local comercial 
-            "SORAMA", ubicado en las calles Amazonas y 27 de Noviembre, en esta ciudad de La Maná, se reúnen los señores 
+            &ldquo;SORAMA&rdquo;, ubicado en las calles Amazonas y 27 de Noviembre, en esta ciudad de La Maná, se reúnen los señores 
             comerciantes del Cantón con el propósito de formar la Cámara de Comercio con la asistencia de 31 ciudadanos.
           </p>
           <p className="mb-4">
