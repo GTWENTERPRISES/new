@@ -19,7 +19,6 @@ import { ArrowUp } from 'lucide-react';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
   const [loading, setLoading] = useState(true);
 
   // Handle scroll events
@@ -28,15 +27,8 @@ const Index = () => {
       // Show scroll-to-top button after scrolling down 500px
       setShowScrollTop(window.scrollY > 500);
       
-      // Determine active section for potential navigation highlighting
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - 200 && window.scrollY < sectionTop + sectionHeight - 200) {
-          setActiveSection(section.getAttribute('id') || '');
-        }
-      });
+      // We're removing the active section tracking since it's not being used
+      // If you need this functionality later, you can add it back
     };
 
     window.addEventListener('scroll', handleScroll);
