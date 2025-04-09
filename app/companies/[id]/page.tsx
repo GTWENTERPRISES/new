@@ -174,7 +174,7 @@ const ProductModal = ({ product, company }: { product: Product; company: Company
           </div>
           
           <div className="border-t border-gray-200 pt-6">
-            <h4 className="font-semibold text-xl mb-4 text-blue-950">Características:</h4>
+            
             <ul className="space-y-3">
               {product.caracteristicas.map((caracteristica, index) => (
                 <li key={index} className="flex items-center gap-3 text-gray-700">

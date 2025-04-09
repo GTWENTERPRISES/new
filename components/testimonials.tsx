@@ -82,19 +82,19 @@ const TestimonialsCarousel: React.FC = () => {
             {[...testimonios, ...testimonios, ...testimonios].map((testimonial, index) => (
               <div
                 key={`${testimonial.id}-${index}`}
-                className="testimonial-item flex-shrink-0 w-80 px-4"
+                className="testimonial-item flex-shrink-0 w-64 px-2"
               >
-                <div className="bg-blue-950 border-none shadow-lg transform m-4 rounded transition-all duration-500 hover:scale-105 hover:z-10 h-full cursor-pointer rounded-lg p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-xl font-bold text-white">
+                <div className="bg-blue-950/90 backdrop-blur-sm border border-blue-900/20 shadow-md transform transition-all duration-300 hover:scale-102 hover:shadow-xl h-full cursor-pointer rounded-xl p-4">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-lg font-semibold text-white shadow-inner">
                       {testimonial.nombre.charAt(0)}
                     </div>
                     <div>
-                      <h3 className="text-white text-lg font-semibold">{testimonial.nombre}</h3>
-                      <p className="text-sm text-white">{testimonial.cargo} at {testimonial.empresa_nombre}</p>
+                      <h3 className="text-white text-base font-medium leading-tight">{testimonial.nombre}</h3>
+                      <p className="text-xs text-gray-300">{testimonial.cargo} at {testimonial.empresa_nombre}</p>
                     </div>
                   </div>
-                  <p className="italic text-white text-sm">{testimonial.comentario}</p>
+                  <p className=" text-gray-200 text-xs leading-relaxed">{testimonial.comentario}</p>
                 </div>
               </div>
             ))}

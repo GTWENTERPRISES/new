@@ -42,11 +42,11 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-gradient-to-r from-blue-950/95 to-blue-900/95 backdrop-blur-md py-2 shadow-lg' 
-        : 'bg-gradient-to-r from-blue-950 to-blue-900 py-4'
+        ? 'bg-blue-950 py-2 shadow-lg' 
+        : 'bg-blue-900 py-4'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
+      <div className="container  mx-auto px-4">
+        <div className="flex  justify-between items-center">
           {/* Logo */}
           <Link 
             href="/" 
@@ -83,8 +83,8 @@ const Navbar = () => {
                   href={item.path}
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 group relative overflow-hidden ${
                     isActive 
-                      ? 'text-white bg-white/10' 
-                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                      ? 'text-white bg-gray-800' 
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
@@ -110,26 +110,31 @@ const Navbar = () => {
 
           {/* Botón de menú móvil */}
           <button
-            className="md:hidden relative w-10 h-10 flex items-center justify-center text-white transition-colors duration-300"
+            className="md:hidden relative w-12 h-12 flex items-center justify-center text-white transition-all duration-300 overflow-hidden rounded-xl hover:shadow-lg"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isOpen}
           >
-            <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-              isOpen ? 'bg-red-600/20 scale-110' : 'bg-white/10 hover:bg-white/20 hover:scale-110'
+            <div className={`absolute inset-0 transition-all duration-300 ${
+              isOpen 
+                ? 'bg-gradient-to-br from-red-500 to-red-600 scale-105' 
+                : 'bg-gradient-to-br from-gray-800 to-gray-900 hover:scale-105'
             }`} />
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <div className="relative z-10 transform transition-transform duration-300">
+              {isOpen ? <X size={26} /> : <Menu size={26} />}
+            </div>
+            <div className={`absolute inset-0 bg-black/10 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
           </button>
         </div>
 
         {/* Menú móvil */}
         <div 
-          className={`md:hidden fixed inset-0 top-[57px] bg-gradient-to-b from-blue-950 to-blue-900 transform transition-all duration-300 ease-in-out ${
+          className={`md:hidden fixed inset-0 top-[85px] bg-blue-950 shadow-xl transform transition-all duration-300 ease-in-out ${
             isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
           }`}
           aria-hidden={!isOpen}
         >
-          <div className="flex flex-col p-6 space-y-2">
+          <div className="flex flex-col bg-blue-950 p-6 space-y-2">
             {navItems.map((item, index) => {
               const isActive = pathname === item.path;
               return (
@@ -139,8 +144,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`flex items-center p-3 rounded-lg transition-all duration-300 group ${
                     isActive 
-                      ? 'text-white bg-white/10' 
-                      : 'text-gray-200 hover:bg-white/5'
+                      ? 'text-white bg-gray-800' 
+                      : 'text-gray-200 hover:bg-gray-700'
                   }`}
                   style={{
                     animationDelay: `${index * 100}ms`,

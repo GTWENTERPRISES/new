@@ -128,10 +128,10 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-extrabold mb-4 text-blue-950">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-blue-950">
           Historia de la <span className="text-red-600">Cámara de Comercio</span>
           </h1>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto px-4">
             Un viaje de innovación, crecimiento y liderazgo empresarial en La Maná desde 1994
           </p>
         </motion.div>
@@ -167,17 +167,17 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
           className="mb-16"
         >
           <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Directiva Fundadora</h2>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {fundadoresPrincipales.map((fundador, index) => (
               <div 
                 key={index}
-                className="bg-blue-950 p-6 rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105"
+                className="bg-blue-950 p-4 sm:p-6 rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105"
               >
-                <div className="bg-red-600 p-3 rounded-full mx-auto mb-4 w-16 h-16 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="bg-red-600 p-2 sm:p-3 rounded-full mx-auto mb-3 sm:mb-4 w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center">
+                  <Users className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{fundador.nombre}</h3>
-                <p className="text-gray-400">{fundador.cargo}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">{fundador.nombre}</h3>
+                <p className="text-sm sm:text-base text-gray-400">{fundador.cargo}</p>
               </div>
             ))}
           </div>
@@ -195,15 +195,15 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 className={`
-                  flex items-center mb-16 
-                  ${index % 2 === 0 ? 'flex-row-reverse' : ''}
+                  flex flex-col md:flex-row items-center mb-16 
+                  ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}
                 `}
               >
                 <div 
                   className={`
-                    w-1/2 p-8 rounded-2xl shadow-2xl 
-                    ${index % 2 === 0 ? 'mr-8' : 'ml-8'}
-                    bg-blue-950
+                    w-full md:w-1/2 p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl 
+                    ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}
+                    bg-blue-950 mb-4 md:mb-0
                     border border-opacity-20 hover:border-opacity-100
                     transform transition-all duration-300 hover:scale-105
                     cursor-pointer
@@ -214,7 +214,7 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
                     <div className={`${hito.color} p-3 rounded-full mr-4`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">
                       {hito.año} - {hito.titulo}
                     </h3>
                   </div>
@@ -235,7 +235,7 @@ const HistoriaCamaraComercioLaMana: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className={`
-                  p-8 rounded-2xl shadow-2xl 
+                  p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl 
                   bg-blue-950
                   transform transition-all duration-300 hover:scale-105
                 `}
