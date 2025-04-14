@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, MapPin, Phone, Facebook, Globe, ArrowRight, Clock } from "lucide-react"
+import { Mail, MapPin, Phone, Facebook, Clock } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
