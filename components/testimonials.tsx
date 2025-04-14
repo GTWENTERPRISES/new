@@ -91,7 +91,7 @@ const TestimonialsCarousel: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-white text-base font-medium leading-tight">{testimonial.nombre}</h3>
-                      <p className="text-xs text-gray-300">{testimonial.cargo} at {testimonial.empresa_nombre}</p>
+                      <p className="text-xs text-gray-300">{testimonial.cargo} de {testimonial.empresa_nombre}</p>
                     </div>
                   </div>
                   <p className=" text-gray-200 text-xs leading-relaxed">{testimonial.comentario}</p>

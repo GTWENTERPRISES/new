@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import {
-  Mail, Phone, MapPin, Award,
+  MessageCircle, Phone, MapPin, Award, Mail,
   Target, Globe, Star, ChevronRight, ShoppingCart,
   Camera, ArrowRight
 } from 'lucide-react';
@@ -101,26 +101,25 @@ const ProductCard = ({ product, company }: { product: Product; company: Company 
         <p className="text-gray-600 text-sm line-clamp-2">{product.descripcion}</p>
 
         <div className="flex gap-2 pt-2">
-          <Button 
-            className="flex-1 bg-red-600 hover:bg-red-700 text-white transition-colors"
-            onClick={() => window.open(company.sitio_web, '_blank')}
-          >
-            <ShoppingCart className="w-4 h-4 mr-2" />
-            Comprar
-          </Button>
-          <ProductModal product={product} company={company} />
+          
+          
+<ProductModal product={product} company={company}>
+  <Button variant="outline" className="w-full bg-blue-950 text-white hover:bg-blue-900">
+    Ver más detalles
+    <ArrowRight className="w-4 h-4 ml-2" />
+  </Button>
+</ProductModal>
+          
         </div>
       </CardContent>
     </Card>
   );
 };
 
-const ProductModal = ({ product, company }: { product: Product; company: Company }) => (
+const ProductModal = ({ children, product, company }: { children: React.ReactNode; product: Product; company: Company }) => (
   <Dialog>
     <DialogTrigger asChild>
-      <Button variant="outline" className="bg-blue-950 text-white hover:bg-blue-900">
-        <ArrowRight className="w-4 h-4" />
-      </Button>
+      {children}
     </DialogTrigger>
     <DialogContent className="max-w-4xl bg-white">
       <DialogHeader>
@@ -189,18 +188,18 @@ const ProductModal = ({ product, company }: { product: Product; company: Company
           
           <div className="space-y-4 pt-4">
             <Button 
-              className="w-full bg-red-600 hover:bg-red-700 text-white text-lg py-6"
+              className="w-full bg-red-600 hover:bg-red-700 text-white"
               onClick={() => window.open(company.sitio_web, '_blank')}
             >
               <ShoppingCart className="w-5 h-5 mr-2" />
-              Comprar Ahora - {product.precio}
+              Contactarse para compra - {product.precio}
             </Button>
             <Button 
               className="w-full bg-blue-950 hover:bg-blue-900 text-white"
-              onClick={() => window.open(`mailto:${company.correo}`, '_blank')}
+              onClick={() => window.open(`https://wa.me/${company.telefono.replace(/[^0-9]/g, '')}?text=Hola, estoy interesado en sus productos`, '_blank')}
             >
-              <Mail className="w-4 h-4 mr-2" />
-              Contactar Vendedor
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Whatsapp
             </Button>
           </div>
         </div>

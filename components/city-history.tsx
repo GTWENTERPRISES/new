@@ -9,7 +9,7 @@ import {
   Mountain,
   Thermometer,
   Compass,
-  TreePine
+  TreePine, TrendingUp
 } from 'lucide-react';
 
 interface CityDetail {
@@ -26,39 +26,59 @@ interface HistoricalFact {
 
 const CityHistory: React.FC = () => {
   const cityDetails: CityDetail[] = [
-    { label: "Área", value: "646.9 km²", icon: MapPin },
-    { label: "Ubicación", value: "Occidente de la provincia", icon: Compass },
-    { label: "Altura", value: "600 a 220 m.s.n.m.", icon: Mountain },
+    { label: "Área", value: "663 km²", icon: MapPin },
+    { label: "Ubicación", value: "Occidente de Cotopaxi", icon: Compass },
+    { label: "Altura", value: "200 a 1150 m.s.n.m.", icon: Mountain },
     { label: "Cantonización", value: "19 de mayo de 1986", icon: Calendar },
-    { label: "Población", value: "36,011 habitantes", icon: Users },
-    { label: "Temperatura", value: "23 a 30 grados centígrados", icon: Thermometer }
+    { label: "Población", value: "42,216 habitantes (2010)", icon: Users },
+    { label: "Temperatura", value: "23°C a 35°C", icon: Thermometer }
   ];
 
   const historicalFacts: HistoricalFact[] = [
     {
-      title: "Fundación",
-      description: "La Maná es uno de los seis cantones de la Provincia de Cotopaxi, fundada por Carlos Lozada Quintana, comerciante el cual instaló un aserrío a finales del siglo 19 en el cual se empezó a comercializar productos de la sierra y costa.",
+      title: "Primeros Asentamientos (1870)",
+      description: "Los primeros colonos llegaron a La Maná en 1870, atraídos por la fertilidad de sus tierras. Provenían principalmente de Latacunga, Pujilí y Saquisilí. En 1899, Carlos Lozada Quintana estableció un importante aserradero que impulsó el comercio entre la sierra y la costa.",
       icon: Calendar
     },
     {
-      title: "Ubicación Estratégica",
-      description: "En el centro del Ecuador. A una altitud de 800 metros, La Maná es un punto estratégico para el comercio entre la sierra y la costa.",
-      icon: MapPin
+      title: "Desarrollo Agrícola (1900-1950)",
+      description: "Durante la primera mitad del siglo XX, La Maná experimentó un significativo crecimiento gracias al cultivo de productos como cacao, café y plátano. La construcción de caminos vecinales facilitó el comercio y atrajo más colonos a la región.",
+      icon: TrendingUp
     },
     {
-      title: "Desarrollo",
-      description: "La Maná era un recinto que perteneció a la parroquia El Tingo del cantón Pujilí por varios años pero debido a su crecimiento y desarrollo sus habitantes organizaron un comité pro-parroquialización para buscar un mejor porvenir para su pueblo hasta que, finalmente lograron la cantonización de La Maná, gracias a la tenaz gestión de hombres patriotas y decididos.",
+      title: "Parroquialización (1952)",
+      description: "El 18 de octubre de 1952, La Maná alcanzó el estatus de parroquia del cantón Pujilí, tras una intensa gestión del primer Comité de Patriotas Pro-Parroquialización formado en 1950. Este hito marcó el inicio de su autonomía administrativa.",
       icon: Users
+    },
+    {
+      title: "Proceso de Cantonización (1978-1986)",
+      description: "El proceso de cantonización inició en 1978 con la formación del Comité Pro-Cantonización. Tras años de gestión y con el apoyo de figuras como el Dr. Holger Velasteguí Domínguez, se logró la cantonización el 19 de mayo de 1986.",
+      icon: Calendar
     },
     {
       title: "Recursos Naturales",
-      description: "Sus inmensos bosques, sus gigantescas montañas, su plátano, orito, yuca, cacao, tabaco y café, tanto como su estratégica ubicación geográfica, son factores que le confieren características especiales que propician su desarrollo y le otorgan un papel protagónico en la economía de nuestro país.",
+      description: "La Maná posee una extraordinaria biodiversidad gracias a su ubicación privilegiada. Sus bosques albergan especies únicas de flora y fauna, mientras que sus suelos fértiles permiten el cultivo de productos como banano, cacao, café, caña de azúcar y cítricos.",
       icon: TreePine
     },
     {
-      title: "Diversidad Cultural",
-      description: "Esta joven entidad alberga a muchos humanos de diversa procedencia, tanto serranos como costeños conviven en La Maná formando un solo pueblo donde todas las manifestaciones culturales de todos ellos se han fusionado, dando lugar a una mezcla inmensamente rica en tradiciones folclóricas.",
+      title: "Desarrollo Económico",
+      description: "El cantón se ha convertido en un importante centro agrícola y comercial de Cotopaxi. Su economía se basa en la agricultura, ganadería y comercio, destacando la producción de banano orgánico para exportación y el turismo ecológico.",
+      icon: TrendingUp
+    },
+    {
+      title: "Estructura Política",
+      description: "Actualmente, La Maná cuenta con tres parroquias urbanas: La Maná, El Carmen y El Triunfo; y dos rurales: Guasaganda y Pucayacu. Esta organización territorial ha permitido una mejor administración y desarrollo de servicios públicos.",
       icon: Users
+    },
+    {
+      title: "Patrimonio Cultural",
+      description: "La riqueza cultural de La Maná se refleja en su diversidad étnica, donde conviven pobladores de la sierra y la costa, creando una identidad única. Sus festividades, gastronomía y tradiciones son una mezcla de estas influencias culturales.",
+      icon: Users
+    },
+    {
+      title: "Potencial Turístico",
+      description: "El cantón ofrece diversos atractivos turísticos, desde cascadas y senderos ecológicos hasta fincas agroturísticas. Las Chorreras del Zapanal, el Complejo Ecológico Las Pirámides y las plantaciones de banano orgánico son destinos destacados.",
+      icon: Mountain
     }
   ];
 
@@ -143,28 +163,28 @@ const CityHistory: React.FC = () => {
               <Compass className="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">NORTE:</h3>
-                <p className="text-gray-300">con la parroquia Alluriquín, cantón Santo Domingo</p>
+                <p className="text-gray-300">Con la parroquia Alluriquín, cantón Santo Domingo</p>
               </div>
             </div>
             <div className="flex items-start">
               <Compass className="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">SUR:</h3>
-                <p className="text-gray-300">el río Calope es el accidente geográfico que la separa de la parroquia Moraspungo, cantón Pangua</p>
+                <p className="text-gray-300">El río Calope es el accidente geográfico que la separa de la parroquia Moraspungo, cantón Pangua</p>
               </div>
             </div>
             <div className="flex items-start">
               <Compass className="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">ESTE:</h3>
-                <p className="text-gray-300">la parroquia La Esperanza del cantón Pujilí y Zumbahua</p>
+                <p className="text-gray-300">La parroquia La Esperanza del cantón Pujilí y Zumbahua</p>
               </div>
             </div>
             <div className="flex items-start">
               <Compass className="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">OESTE:</h3>
-                <p className="text-gray-300">el cantón Quinsaloma de la provincia de Los Ríos</p>
+                <p className="text-gray-300">El cantón Quinsaloma de la provincia de Los Ríos</p>
               </div>
             </div>
           </div>
@@ -181,17 +201,17 @@ const CityHistory: React.FC = () => {
             Historia y Características
           </motion.h2>
           
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {historicalFacts.map((fact, index) => {
               const Icon = fact.icon;
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="bg-blue-950 p-6 rounded-xl text-white flex items-start gap-4"
+                  className="bg-blue-950 p-6 rounded-xl text-white flex items-start gap-4 h-full"
                 >
                   <div className="bg-red-600 p-3 rounded-full flex-shrink-0">
                     <Icon className="w-6 h-6 text-white" />
@@ -208,18 +228,7 @@ const CityHistory: React.FC = () => {
 
         
 
-        {/* Foundation Date */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-16"
-        >
-          <p className="text-2xl font-bold text-blue-950">
-            Fundada el <span className="text-red-600">19 de mayo de 1986</span>
-          </p>
-        </motion.div>
+       
       </div>
     </section>
   );
